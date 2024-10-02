@@ -31,7 +31,7 @@ public class Base64ConverterController {
             // This will handle cases where the input is not valid Base64
             return new ResponseEntity<>(new Base64Response("Invalid Base64 input", null), HttpStatus.BAD_REQUEST);
         } catch (Exception e) {
-            return new ResponseEntity<>(new Base64Response("Error decoding string", null), HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity<>(new Base64Response("Error decoding string try again later", null), HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 }
